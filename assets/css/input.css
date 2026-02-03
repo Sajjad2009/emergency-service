@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+	/* colors */
+	--color-primary: #00a63e;
+	--color-secondary: #facc15;
+	--color-alice-blue: #e5f5f7;
+	--color-border: #eeeeee;
+	--color-blue-border: #4b61a1;
+	--color-offWhite: #f9fafb;
+	--color-headline-black: #111827;
+	--color-paragraph: #5b6473;
+	--color-white: #ffffff;
+	--color-red-new: #ff4747;
+	--color-gray-500: #6b7280;
+	--color-secondary-light: #4d4e4f;
+	--sal-duration: 2s;
+
+	/* shadow */
+
+	--shadow-light: 0px 7px 35px 4px rgba(0, 0, 0, 0.04);
+
+	/* spacing */
+	--spacing-30: 30px;
+	--spacing-100: 100px;
+
+	/* fonts */
+	--font-hind: "Hind Madurai", sans-serif;
+	--font-inter: "Inter", sans-serif;
+
+	/* text-size */
+	--text-10: 10px;
+	--text-10--line-height: 100%;
+	--text-12: 12px;
+	--text-12--line-height: 14px;
+	--text-12--letter-spacing: 0.02em;
+	--text-14: 14px;
+	--text-14--line-height: 130%;
+	--text-16: 16px;
+	--text-16--line-height: 150%;
+
+	--text-18: 18px;
+	--text-18--line-height: 130%;
+	/* --text-20: 20px; */
+	--text-20: 20px;
+	--text-20--line-height: 130%;
+
+	--text-24: clamp(20px, 2vw, 24px);
+	--text-24--line-height: 120%;
+
+	--text-32: clamp(24px, 3vw, 32px);
+	--text-32--line-height: 130%;
+
+	--text-40: clamp(28px, 3vw, 40px);
+	--text-40--line-height: 120%;
+}
+
+@layer base {
+	*,
+	*::before,
+	*::after {
+		@apply m-0 p-0;
+	}
+
+	html {
+		@apply scroll-smooth;
+	}
+
+	body {
+		@apply text-paragraph font-inter  text-16 overflow-x-hidden bg-white scroll-smooth;
+	}
+
+	.container-x {
+		@apply w-[calc(100%-20px)] sm:w-[calc(100%-120px)]  mx-auto;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		@apply text-headline-black font-hind font-semibold;
+	}
+
+	h1 {
+		@apply text-40;
+	}
+	h2 {
+		@apply text-24;
+	}
+	h3 {
+		@apply text-20;
+	}
+	h4 {
+		@apply text-18;
+	}
+
+	a {
+		@apply text-16 text-headline-black;
+	}
+	p {
+		@apply text-12;
+	}
+
+	/* li {
+    @apply list-none;
+  } */
+
+	button {
+		@apply cursor-pointer;
+	}
+}
+
+@layer components {
+}
+
+@layer utilities {
+}
